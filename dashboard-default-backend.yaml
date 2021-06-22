@@ -1,0 +1,11 @@
+apiVersion: 1
+kind: Service
+metadata:
+  name: default-http-backend   # this is the current default name "kubectl describe ingress dashboard-ingress"
+spec:
+  selector:
+    app: default-response-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9090
